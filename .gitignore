@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.cache/
+models/*.safetensors
+*.log
+.DS_Store
+
+third_party/
+
+output/*.wav
+output/*.mp3
+.gradio/
+
+run_app-*.err
+run_app-*.out

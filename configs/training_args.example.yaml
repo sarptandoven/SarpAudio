@@ -1,0 +1,35 @@
+data_dir:
+  - /path/to/preprocessed_dataset_a/
+  - /path/to/preprocessed_dataset_b/
+
+speaker_index:
+  - /path/to/preprocessed_dataset_a/index.txt
+  - /path/to/preprocessed_dataset_b/index.txt
+
+output_dir: tts_iclora_v1
+
+checkpoint: dramabox-dit-v1.safetensors
+full_checkpoint: dramabox-audio-components.safetensors
+base_model: dev
+
+lora_rank: 128
+lora_alpha: 128
+lora_dropout: 0.1
+
+ref_ratio: 0.3
+max_ref_tokens: 200
+
+text_dropout: 0.4
+
+steps: 10000
+lr: 1.0e-04
+lr_scheduler: cosine
+warmup_steps: 500
+
+batch_size: 1
+grad_accum: 4
+max_grad_norm: 1.0
+
+save_every: 500
+log_every: 50
+seed: 53
